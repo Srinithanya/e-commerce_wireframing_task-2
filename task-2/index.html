@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Case Study: E-Commerce Homepage Wireframe</title>
+    <!-- Google Fonts: Space Grotesk for headings, Inter for UI/text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar-placeholder">UX</div>
+                <div class="designer-info">
+                    <h3>Alex Rivera</h3>
+                    <p>Lead UX Designer</p>
+                </div>
+            </div>
+            
+            <div class="case-study-meta">
+                <span class="meta-label">PROJECT</span>
+                <h2 class="project-title">E-Commerce Homepage</h2>
+                <div class="meta-details">
+                    <div><span>Stage</span><span>Low-Fi Wireframe</span></div>
+                    <div><span>Format</span><span>Desktop & Mobile</span></div>
+                    <div><span>Palette</span><span>Grayscale Spec</span></div>
+                </div>
+            </div>
+
+            <nav class="nav-steps">
+                <button class="nav-step active" data-frame="1">
+                    <span class="step-num">01</span>
+                    <span class="step-name">Problem Analysis</span>
+                    <span class="step-dot"></span>
+                </button>
+                <button class="nav-step" data-frame="2">
+                    <span class="step-num">02</span>
+                    <span class="step-name">User Flow Diagram</span>
+                    <span class="step-dot"></span>
+                </button>
+                <button class="nav-step" data-frame="3">
+                    <span class="step-num">03</span>
+                    <span class="step-name">Desktop Wireframe</span>
+                    <span class="step-dot"></span>
+                </button>
+                <button class="nav-step" data-frame="4">
+                    <span class="step-num">04</span>
+                    <span class="step-name">Wireframe Explanation</span>
+                    <span class="step-dot"></span>
+                </button>
+                <button class="nav-step" data-frame="5">
+                    <span class="step-num">05</span>
+                    <span class="step-name">Mobile Wireframe</span>
+                    <span class="step-dot"></span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Press <kbd class="key-hint">←</kbd> <kbd class="key-hint">→</kbd> keys to navigate</p>
+                <div class="theme-info">Wireframe Spec Mode</div>
+            </div>
+        </aside>
+
+        <!-- Main Display Area -->
+        <main class="viewport-area">
+            <!-- Top Toolbar -->
+            <header class="viewport-header">
+                <div class="breadcrumb">
+                    <span class="bc-parent">Case Study</span>
+                    <span class="bc-sep">/</span>
+                    <span class="bc-child" id="current-frame-title">Problem Analysis</span>
+                </div>
+                
+                <div class="global-controls">
+                    <button class="btn-control" id="btn-toggle-grid" title="Toggle Grid Layout Overlay (Desktop Frame only)">
+                        <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                            <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
+                            <line x1="15" y1="3" x2="15" y2="21" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
+                            <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
+                            <line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
+                        </svg>
+                        <span>Toggle Grid</span>
+                    </button>
+                    <button class="btn-control" id="btn-toggle-annotations" title="Toggle Wireframe Annotations">
+                        <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Annotations</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Frames Container -->
+            <div class="frames-wrapper">
+                
+                <!-- FRAME 1: Problem Analysis -->
+                <section class="frame-content active" id="frame-1">
+                    <div class="frame-intro">
+                        <span class="section-tag">01 / STAGE: UNDERSTAND</span>
+                        <h1 class="frame-heading">Checkout Attrition & Homepage Pain Points</h1>
+                        <p class="frame-desc">Why do users abandon our shopping flow? An analysis of the existing homepage reveals critical UX bottlenecks that derail conversions before customers even reach the product details page.</p>
+                    </div>
+
+                    <div class="problem-layout">
+                        <!-- Left: Pain Points Interactive list -->
+                        <div class="pain-points-list">
+                            <div class="pain-point-card" data-pain="clutter">
+                                <div class="card-num">01</div>
+                                <div class="card-body">
+                                    <h3>Cluttered Layout</h3>
+                                    <p>Too many competing elements and non-standard layouts increase cognitive load, forcing users to search for primary actions.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pain-point-card" data-pain="distractions">
+                                <div class="card-num">02</div>
+                                <div class="card-body">
+                                    <h3>Too Many Distractions</h3>
+                                    <p>Multiple secondary banners, flash promotions, and unrelated categories divert user attention away from product exploration.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pain-point-card" data-pain="hidden-checkout">
+                                <div class="card-num">03</div>
+                                <div class="card-body">
+                                    <h3>Hidden Checkout Process</h3>
+                                    <p>The cart access and status are visually obscure. Users cannot quickly verify items added or proceed to purchase.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pain-point-card" data-pain="poor-cta">
+                                <div class="card-num">04</div>
+                                <div class="card-body">
+                                    <h3>Poor CTA Visibility</h3>
+                                    <p>Secondary links and actions compete visually with primary triggers, causing hesitation and reducing click-through rates.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Interactive Bad Homepage Wireframe (Before) -->
+                        <div class="problem-visual">
+                            <div class="visual-header">
+                                <span class="badge badge-error">Legacy Homepage Layout (Unoptimized)</span>
+                                <span class="visual-instruction">Hover over pain points to inspect</span>
+                            </div>
+                            <div class="bad-wireframe-container">
+                                <!-- Clutter Layer -->
+                                <div class="bad-item bad-clutter" id="bad-item-clutter">
+                                    <div class="bad-placeholder-text">CLUTTERED / RANDOM CONTENT BLOCKS</div>
+                                    <div class="bad-item-tag">01. Clutter</div>
+                                </div>
+                                <!-- Distractions Layer -->
+                                <div class="bad-item bad-distractions" id="bad-item-distractions">
+                                    <div class="bad-banner-lines"></div>
+                                    <div class="bad-placeholder-text">PROMO AD BANNER • FLASH SALE BANNER • NEWSLETTER POPUP</div>
+                                    <div class="bad-item-tag">02. Distractions</div>
+                                </div>
+                                <!-- Hidden Checkout Layer -->
+                                <div class="bad-item bad-hidden-checkout" id="bad-item-hidden-checkout">
+                                    <div class="bad-small-cart">Cart</div>
+                                    <div class="bad-item-tag">03. Hidden Checkout</div>
+                                </div>
+                                <!-- Poor CTA Layer -->
+                                <div class="bad-item bad-poor-cta" id="bad-item-poor-cta">
+                                    <span class="bad-btn-link">View Details</span>
+                                    <span class="bad-btn-link">Learn More</span>
+                                    <div class="bad-item-tag">04. Poor CTA</div>
+                                </div>
+                                
+                                <!-- Underlying bad page mockup structure -->
+                                <div class="bad-page-mockup">
+                                    <div class="bad-nav">
+                                        <div class="bad-logo">LOGO</div>
+                                        <div class="bad-links">
+                                            <span>Link</span><span>Link</span><span>Link</span><span>Link</span><span>Link</span><span>Link</span>
+                                        </div>
+                                    </div>
+                                    <div class="bad-hero">
+                                        <div class="bad-hero-grid"></div>
+                                        <p>Random Text Overlay Here</p>
+                                    </div>
+                                    <div class="bad-products">
+                                        <div class="bad-prod-box"></div>
+                                        <div class="bad-prod-box"></div>
+                                        <div class="bad-prod-box"></div>
+                                        <div class="bad-prod-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FRAME 2: User Flow Diagram -->
+                <section class="frame-content" id="frame-2">
+                    <div class="frame-intro">
+                        <span class="section-tag">02 / STAGE: DEFINE</span>
+                        <h1 class="frame-heading">The Simplified Purchase Funnel</h1>
+                        <p class="frame-desc">By mapping the user journey, we streamline the path from initial discovery to successful confirmation. Each node represents a key wireframe view designed to support frictionless transitions.</p>
+                    </div>
+
+                    <div class="flow-layout">
+                        <!-- Horizontal/Vertical Responsive Node Connection Diagram -->
+                        <div class="flow-diagram-container">
+                            <div class="flow-step-node active" data-step="1">
+                                <div class="node-badge">1</div>
+                                <div class="node-content">
+                                    <h4>Homepage</h4>
+                                    <p>Initial entry, brand validation, hero value proposition, and main navigation gates.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="2">
+                                <div class="node-badge">2</div>
+                                <div class="node-content">
+                                    <h4>Product Category</h4>
+                                    <p>Faceted filtering, grid layouts, and sorting controls to quickly locate products.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="3">
+                                <div class="node-badge">3</div>
+                                <div class="node-content">
+                                    <h4>Product Details</h4>
+                                    <p>High-fidelity specifications, size selector, dynamic shipping estimations, and primary CTA.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="4">
+                                <div class="node-badge">4</div>
+                                <div class="node-content">
+                                    <h4>Add to Cart</h4>
+                                    <p>Micro-interaction feedback, slide-out drawer confirmation, summary, and direct checkout trigger.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="5">
+                                <div class="node-badge">5</div>
+                                <div class="node-content">
+                                    <h4>Checkout</h4>
+                                    <p>One-page checkout form, guest login options, billing, and shipping details input fields.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="6">
+                                <div class="node-badge">6</div>
+                                <div class="node-content">
+                                    <h4>Payment</h4>
+                                    <p>Secure gate selection, validation cues, auto-formatting inputs, and order review list.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg class="connector-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                    <line x1="0" y1="10" x2="100" y2="10" stroke="#71717a" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <polygon points="95,5 100,10 95,15" fill="#71717a"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-step-node" data-step="7">
+                                <div class="node-badge">7</div>
+                                <div class="node-content">
+                                    <h4>Order Confirmation</h4>
+                                    <p>Success notification, order summary details, tracking code, and next steps.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step Details Panel -->
+                        <div class="flow-step-info-card">
+                            <div class="info-card-header">
+                                <span class="step-indicator">STEP <span id="info-step-num">1</span> OF 7</span>
+                                <h3 id="info-step-title">Homepage Overview</h3>
+                            </div>
+                            <div class="info-card-body">
+                                <p id="info-step-desc">The entry point of the funnel is optimized to reduce visual noise. Its primary objective is to direct users clearly to relevant categories or featured collections, keeping navigation simple and CTAs highly visible.</p>
+                                <div class="ux-rationale-box">
+                                    <strong>UX Rationale:</strong>
+                                    <ul id="info-step-rationale">
+                                        <li>High CTA contrast elements guide the user to product lists.</li>
+                                        <li>Persistent, search-centric header lets user jump stages.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info-card-controls">
+                                <button class="btn-secondary" id="btn-flow-prev" disabled>Previous</button>
+                                <button class="btn-primary" id="btn-flow-next">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FRAME 3 & 4: Desktop Homepage Wireframe + Explanation -->
+                <!-- We combine the rendering of 3 and 4, letting the user toggle explanations, or have a specific annotated view for Frame 4 -->
+                <section class="frame-content" id="frame-3">
+                    <div class="frame-intro">
+                        <span class="section-tag">03 / STAGE: DESIGN (DESKTOP)</span>
+                        <h1 class="frame-heading">Optimized Desktop Wireframe Layout</h1>
+                        <p class="frame-desc">The desktop homepage wireframe establishes clear hierarchy, reduces clutter, and highlights the primary shopping path. Toggle the Grid Overlay in the top bar to inspect structural alignments.</p>
+                    </div>
+
+                    <div class="desktop-wireframe-wrapper">
+                        <!-- Browser Window Mockup -->
+                        <div class="browser-mockup">
+                            <div class="browser-chrome">
+                                <div class="chrome-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="chrome-address-bar">https://ecommerce-storefront.io/home</div>
+                            </div>
+                            <div class="browser-content" id="desktop-wireframe-content">
+                                
+                                <!-- 12 Column Grid Overlay (visible when toggled) -->
+                                <div class="grid-overlay" id="desktop-grid-overlay">
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                    <div class="grid-col"></div><div class="grid-col"></div>
+                                </div>
+
+                                <!-- WIREFRAME CONTAINER -->
+                                <div class="wireframe-page">
+                                    
+                                    <!-- HEADER / NAV -->
+                                    <header class="wf-header">
+                                        <div class="wf-container wf-header-inner">
+                                            <div class="wf-logo">
+                                                <div class="placeholder-box diag-lines"></div>
+                                                <span class="wf-logo-text">[LOGO]</span>
+                                            </div>
+                                            <nav class="wf-nav-links">
+                                                <span class="wf-link">Shop</span>
+                                                <span class="wf-link">New Arrivals</span>
+                                                <span class="wf-link">Categories</span>
+                                                <span class="wf-link">Support</span>
+                                            </nav>
+                                            <div class="wf-header-actions">
+                                                <div class="wf-search-bar">
+                                                    <div class="wf-search-icon"></div>
+                                                    <span class="wf-search-placeholder">Search products...</span>
+                                                </div>
+                                                <div class="wf-cart-icon">
+                                                    <div class="wf-icon-box"></div>
+                                                    <span class="wf-cart-badge">0</span>
+                                                    <!-- Annotation Spot 1 -->
+                                                    <div class="wf-annotation-badge" data-annotation="1" style="top: -5px; right: -5px;">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+
+                                    <!-- HERO BANNER -->
+                                    <section class="wf-hero">
+                                        <div class="wf-container wf-hero-inner">
+                                            <div class="wf-hero-text">
+                                                <span class="wf-tag-placeholder">[NEW COLLECTION]</span>
+                                                <h1 class="wf-heading-placeholder">Essential Minimalist Products</h1>
+                                                <p class="wf-subheading-placeholder">Streamlined essentials for your daily routine. Crafted for function, simplicity, and longevity.</p>
+                                                <div class="wf-cta-group">
+                                                    <a href="#" class="wf-btn wf-btn-primary">
+                                                        <span>Shop Collection</span>
+                                                        <span class="arrow">&rarr;</span>
+                                                    </a>
+                                                    <!-- Annotation Spot 2 -->
+                                                    <div class="wf-annotation-badge" data-annotation="2" style="bottom: -10px; right: 10px;">2</div>
+                                                </div>
+                                            </div>
+                                            <div class="wf-hero-image">
+                                                <div class="placeholder-box diag-lines hero-img-placeholder">
+                                                    <span class="placeholder-label">Hero Image Placeholder (16:9)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- PRODUCT CATEGORIES -->
+                                    <section class="wf-categories">
+                                        <div class="wf-container">
+                                            <div class="wf-section-title">
+                                                <h2>Shop by Category</h2>
+                                                <span class="wf-divider"></span>
+                                            </div>
+                                            <div class="wf-categories-grid">
+                                                <!-- Cat 1 -->
+                                                <div class="wf-category-card">
+                                                    <div class="placeholder-box diag-lines cat-img-placeholder">
+                                                        <span class="placeholder-label">Image Placeholder</span>
+                                                    </div>
+                                                    <span class="wf-category-name">[Apparel]</span>
+                                                </div>
+                                                <!-- Cat 2 -->
+                                                <div class="wf-category-card">
+                                                    <div class="placeholder-box diag-lines cat-img-placeholder">
+                                                        <span class="placeholder-label">Image Placeholder</span>
+                                                    </div>
+                                                    <span class="wf-category-name">[Living]</span>
+                                                </div>
+                                                <!-- Cat 3 -->
+                                                <div class="wf-category-card">
+                                                    <div class="placeholder-box diag-lines cat-img-placeholder">
+                                                        <span class="placeholder-label">Image Placeholder</span>
+                                                    </div>
+                                                    <span class="wf-category-name">[Accessories]</span>
+                                                    <!-- Annotation Spot 3 -->
+                                                    <div class="wf-annotation-badge" data-annotation="3" style="top: 10px; right: 10px;">3</div>
+                                                </div>
+                                                <!-- Cat 4 -->
+                                                <div class="wf-category-card">
+                                                    <div class="placeholder-box diag-lines cat-img-placeholder">
+                                                        <span class="placeholder-label">Image Placeholder</span>
+                                                    </div>
+                                                    <span class="wf-category-name">[Tech]</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FEATURED PRODUCTS -->
+                                    <section class="wf-products">
+                                        <div class="wf-container">
+                                            <div class="wf-section-title">
+                                                <h2>Featured Products</h2>
+                                                <span class="wf-divider"></span>
+                                            </div>
+                                            <div class="wf-products-grid">
+                                                <!-- Prod 1 -->
+                                                <div class="wf-product-card">
+                                                    <div class="placeholder-box diag-lines prod-img-placeholder">
+                                                        <span class="placeholder-label">Product Image</span>
+                                                    </div>
+                                                    <div class="wf-prod-details">
+                                                        <span class="wf-prod-cat">[Category]</span>
+                                                        <h3 class="wf-prod-title">Minimalist Backpack</h3>
+                                                        <span class="wf-prod-price">$120.00</span>
+                                                        <div class="wf-prod-action">
+                                                            <button class="wf-btn wf-btn-outline wf-btn-sm">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Prod 2 -->
+                                                <div class="wf-product-card">
+                                                    <div class="placeholder-box diag-lines prod-img-placeholder">
+                                                        <span class="placeholder-label">Product Image</span>
+                                                    </div>
+                                                    <div class="wf-prod-details">
+                                                        <span class="wf-prod-cat">[Category]</span>
+                                                        <h3 class="wf-prod-title">Aluminum Key Tray</h3>
+                                                        <span class="wf-prod-price">$45.00</span>
+                                                        <div class="wf-prod-action">
+                                                            <button class="wf-btn wf-btn-outline wf-btn-sm">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Prod 3 -->
+                                                <div class="wf-product-card">
+                                                    <div class="placeholder-box diag-lines prod-img-placeholder">
+                                                        <span class="placeholder-label">Product Image</span>
+                                                    </div>
+                                                    <div class="wf-prod-details">
+                                                        <span class="wf-prod-cat">[Category]</span>
+                                                        <h3 class="wf-prod-title">Matte Desk Pad</h3>
+                                                        <span class="wf-prod-price">$60.00</span>
+                                                        <div class="wf-prod-action">
+                                                            <button class="wf-btn wf-btn-outline wf-btn-sm">Add to Cart</button>
+                                                            <!-- Annotation Spot 4 -->
+                                                            <div class="wf-annotation-badge" data-annotation="4" style="bottom: 10px; right: 10px;">4</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Prod 4 -->
+                                                <div class="wf-product-card">
+                                                    <div class="placeholder-box diag-lines prod-img-placeholder">
+                                                        <span class="placeholder-label">Product Image</span>
+                                                    </div>
+                                                    <div class="wf-prod-details">
+                                                        <span class="wf-prod-cat">[Category]</span>
+                                                        <h3 class="wf-prod-title">Sleek Water Bottle</h3>
+                                                        <span class="wf-prod-price">$35.00</span>
+                                                        <div class="wf-prod-action">
+                                                            <button class="wf-btn wf-btn-outline wf-btn-sm">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- View All Products CTA -->
+                                            <div class="wf-view-all">
+                                                <button class="wf-btn wf-btn-secondary">View All Products</button>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- BENEFITS SECTION -->
+                                    <section class="wf-benefits">
+                                        <div class="wf-container">
+                                            <div class="wf-benefits-inner">
+                                                <div class="wf-benefit-item">
+                                                    <div class="wf-benefit-icon-box"></div>
+                                                    <h3>[Free Shipping]</h3>
+                                                    <p>Complimentary shipping on orders exceeding $150 threshold.</p>
+                                                </div>
+                                                <div class="wf-benefit-item">
+                                                    <div class="wf-benefit-icon-box"></div>
+                                                    <h3>[Secure Checkout]</h3>
+                                                    <p>Certified SSL 256-bit encryption protecting all transaction endpoints.</p>
+                                                </div>
+                                                <div class="wf-benefit-item">
+                                                    <div class="wf-benefit-icon-box"></div>
+                                                    <h3>[Ethical Sourcing]</h3>
+                                                    <p>Every product is made from sustainable, traceably sourced components.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FOOTER -->
+                                    <footer class="wf-footer">
+                                        <div class="wf-container wf-footer-inner">
+                                            <div class="wf-footer-brand">
+                                                <span class="wf-logo-text">[LOGO]</span>
+                                                <p>High-quality daily goods. Created with precision.</p>
+                                            </div>
+                                            <div class="wf-footer-links-col">
+                                                <h4>Shop</h4>
+                                                <span>All Products</span>
+                                                <span>New Arrivals</span>
+                                                <span>Best Sellers</span>
+                                            </div>
+                                            <div class="wf-footer-links-col">
+                                                <h4>Information</h4>
+                                                <span>Our Story</span>
+                                                <span>Sourcing</span>
+                                                <span>Sustainability</span>
+                                            </div>
+                                            <div class="wf-footer-newsletter">
+                                                <h4>Join Our Newsletter</h4>
+                                                <p>Get priority product release and design updates.</p>
+                                                <div class="wf-newsletter-form">
+                                                    <span class="wf-input-placeholder">Enter your email...</span>
+                                                    <button class="wf-btn wf-btn-sm wf-btn-primary">Join</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FRAME 4: Wireframe Explanation (Visual Annotations Overlay View) -->
+                <!-- Note: Frame 4 is an annotated exploration of Frame 3. We present it with an annotation drawer/sidebars so that it feels very professional. -->
+                <section class="frame-content" id="frame-4">
+                    <div class="frame-intro">
+                        <span class="section-tag">04 / STAGE: EXPLAIN</span>
+                        <h1 class="frame-heading">Detailed UX Design Rationale</h1>
+                        <p class="frame-desc">We annotate the key changes that address checkout attrition and user journey friction. Review the specific placement, size, and layout modifications engineered to maximize task success rates.</p>
+                    </div>
+
+                    <div class="explanation-layout">
+                        <!-- Left Panel: Explanations List -->
+                        <div class="explanation-panel">
+                            <div class="explanation-card active" data-exp="1">
+                                <div class="exp-badge">1</div>
+                                <div class="exp-body">
+                                    <h3>Header & Navigation Simplification</h3>
+                                    <p>The logo, main navigation categories, search bar, and cart are isolated to reduce layout friction. The search bar is placed prominently in the header actions zone next to the Cart icon to facilitate rapid product lookups.</p>
+                                    <div class="exp-metric">
+                                        <strong>Expected Impact:</strong> -22% checkout abandonment due to navigation confusion.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="explanation-card" data-exp="2">
+                                <div class="exp-badge">2</div>
+                                <div class="exp-body">
+                                    <h3>High-Contrast Hero CTA</h3>
+                                    <p>The primary call-to-action button is sized and structured with maximum contrast (solid black on white) inside a clean, text-minimalist layout. Highlighting the primary collection launch routes users straight into the product grid.</p>
+                                    <div class="exp-metric">
+                                        <strong>Expected Impact:</strong> +34% click-through rate to product category lists.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="explanation-card" data-exp="3">
+                                <div class="exp-badge">3</div>
+                                <div class="exp-body">
+                                    <h3>Structured Category Grid</h3>
+                                    <p>A simple 4-column category container grid replaces unorganized collection links. Grid alignment ensures quick scanning and lets users chunk categories easily (Apparel, Living, Accessories, Tech).</p>
+                                    <div class="exp-metric">
+                                        <strong>Expected Impact:</strong> +18% category page pageviews.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="explanation-card" data-exp="4">
+                                <div class="exp-badge">4</div>
+                                <div class="exp-body">
+                                    <h3>Optimized Product Grid Actions</h3>
+                                    <p>Each product card has a clearly visible, outline 'Add to Cart' CTA button. Secondary actions are kept inside details, keeping the grid clean while lowering the friction to add items to the cart directly.</p>
+                                    <div class="exp-metric">
+                                        <strong>Expected Impact:</strong> +28% Add-to-Cart events from homepage.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Visual Mockup with focused highlight -->
+                        <div class="explanation-visual">
+                            <div class="mini-wf-preview-container">
+                                <!-- Miniature annotated preview frame of the homepage -->
+                                <div class="mini-wf-mockup">
+                                    <div class="mini-wf-layer highlight-active" id="mini-wf-layer-1">
+                                        <span class="mini-label">Header & Navigation</span>
+                                        <div class="mini-highlight-box border-dash"></div>
+                                    </div>
+                                    <div class="mini-wf-layer" id="mini-wf-layer-2">
+                                        <span class="mini-label">Hero Banner & CTA</span>
+                                        <div class="mini-highlight-box border-dash"></div>
+                                    </div>
+                                    <div class="mini-wf-layer" id="mini-wf-layer-3">
+                                        <span class="mini-label">Categories Section</span>
+                                        <div class="mini-highlight-box border-dash"></div>
+                                    </div>
+                                    <div class="mini-wf-layer" id="mini-wf-layer-4">
+                                        <span class="mini-label">Product Actions</span>
+                                        <div class="mini-highlight-box border-dash"></div>
+                                    </div>
+                                    
+                                    <!-- Simple representation of the wireframe hierarchy -->
+                                    <div class="mini-grid">
+                                        <div class="m-header"></div>
+                                        <div class="m-hero"></div>
+                                        <div class="m-cats"></div>
+                                        <div class="m-prods"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FRAME 5: Mobile Homepage Wireframe -->
+                <section class="frame-content" id="frame-5">
+                    <div class="frame-intro">
+                        <span class="section-tag">05 / STAGE: DESIGN (MOBILE)</span>
+                        <h1 class="frame-heading">Mobile Homepage Layout</h1>
+                        <p class="frame-desc">Ensuring the shopping funnel behaves responsive, elements are optimized for thumbs and vertical flow. The mobile layout stacks components while preserving strict task visual priority.</p>
+                    </div>
+
+                    <div class="mobile-wireframe-layout">
+                        <!-- Left side: Mobile design features -->
+                        <div class="mobile-features-panel">
+                            <h3>Mobile Optimization Details</h3>
+                            
+                            <div class="feature-item">
+                                <strong>1. Collapsible Hamburger Menu</strong>
+                                <p>Replaces horizontal desktop navigation, housing the global category list to maximize viewport canvas space.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <strong>2. Full-Width Search Input</strong>
+                                <p>Placed directly below the header for easy thumb reach, encouraging active product searches.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <strong>3. Horizontal Swipeable Categories</strong>
+                                <p>Instead of stacking category cards, items are displayed in a touch-friendly carousel to keep the page height compact.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <strong>4. Two-Column Featured Products</strong>
+                                <p>Provides optimal sizing for mobile product grids, maximizing screen usage while displaying clear prices and add button cues.</p>
+                            </div>
+                        </div>
+
+                        <!-- Right side: Phone bezel mockup -->
+                        <div class="mobile-mockup-wrapper">
+                            <div class="mobile-device">
+                                <div class="device-earpiece"></div>
+                                <div class="device-screen">
+                                    <div class="mobile-wf-page">
+                                        
+                                        <!-- Mobile Header -->
+                                        <header class="mwf-header">
+                                            <div class="mwf-menu-btn">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="mwf-logo">[LOGO]</div>
+                                            <div class="mwf-header-actions">
+                                                <div class="mwf-cart-icon">
+                                                    <div class="mwf-icon-box"></div>
+                                                    <span class="mwf-cart-badge">0</span>
+                                                </div>
+                                            </div>
+                                        </header>
+
+                                        <!-- Mobile Search -->
+                                        <div class="mwf-search-container">
+                                            <div class="mwf-search-bar">
+                                                <span class="mwf-search-placeholder">Search products...</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobile Hero -->
+                                        <section class="mwf-hero">
+                                            <div class="placeholder-box diag-lines mwf-hero-image">
+                                                <span class="placeholder-label">Hero Image (4:3)</span>
+                                            </div>
+                                            <div class="mwf-hero-content">
+                                                <span class="mwf-tag-placeholder">[NEW COLLECTION]</span>
+                                                <h2>Essential Minimalist Products</h2>
+                                                <p>Streamlined essentials for daily routines.</p>
+                                                <button class="wf-btn wf-btn-primary wf-btn-full">Shop Collection &rarr;</button>
+                                            </div>
+                                        </section>
+
+                                        <!-- Mobile Categories -->
+                                        <section class="mwf-categories">
+                                            <h3 class="mwf-section-title">Shop by Category</h3>
+                                            <div class="mwf-categories-scroll">
+                                                <div class="mwf-category-card">
+                                                    <div class="placeholder-box diag-lines mwf-cat-img"></div>
+                                                    <span>[Apparel]</span>
+                                                </div>
+                                                <div class="mwf-category-card">
+                                                    <div class="placeholder-box diag-lines mwf-cat-img"></div>
+                                                    <span>[Living]</span>
+                                                </div>
+                                                <div class="mwf-category-card">
+                                                    <div class="placeholder-box diag-lines mwf-cat-img"></div>
+                                                    <span>[Tech]</span>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <!-- Mobile Products -->
+                                        <section class="mwf-products">
+                                            <h3 class="mwf-section-title">Featured Products</h3>
+                                            <div class="mwf-products-grid">
+                                                <!-- Prod 1 -->
+                                                <div class="mwf-prod-card">
+                                                    <div class="placeholder-box diag-lines mwf-prod-img"></div>
+                                                    <h4>Backpack</h4>
+                                                    <span>$120.00</span>
+                                                    <button class="wf-btn wf-btn-outline wf-btn-sm wf-btn-full">Add</button>
+                                                </div>
+                                                <!-- Prod 2 -->
+                                                <div class="mwf-prod-card">
+                                                    <div class="placeholder-box diag-lines mwf-prod-img"></div>
+                                                    <h4>Key Tray</h4>
+                                                    <span>$45.00</span>
+                                                    <button class="wf-btn wf-btn-outline wf-btn-sm wf-btn-full">Add</button>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <!-- Mobile Benefits -->
+                                        <section class="mwf-benefits">
+                                            <div class="mwf-benefit-item">
+                                                <div class="mwf-benefit-icon"></div>
+                                                <div class="mwf-benefit-text">
+                                                    <h4>Free Shipping</h4>
+                                                    <p>On orders over $150</p>
+                                                </div>
+                                            </div>
+                                            <div class="mwf-benefit-item">
+                                                <div class="mwf-benefit-icon"></div>
+                                                <div class="mwf-benefit-text">
+                                                    <h4>Secure Payments</h4>
+                                                    <p>SSL 256-bit encryption</p>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <!-- Mobile Footer -->
+                                        <footer class="mwf-footer">
+                                            <div class="mwf-logo">[LOGO]</div>
+                                            <p>High-quality daily goods. Created with precision.</p>
+                                            <div class="mwf-footer-links">
+                                                <span>Shop All</span> • <span>Our Story</span> • <span>Support</span>
+                                            </div>
+                                            <div class="mwf-newsletter">
+                                                <span class="mwf-newsletter-placeholder">Email Address</span>
+                                                <button class="wf-btn wf-btn-sm wf-btn-primary">Join</button>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="device-home-btn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+            <!-- Bottom Control Navigation bar -->
+            <footer class="viewport-footer">
+                <button class="btn-nav-arrow" id="btn-prev-frame" disabled>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    <span>Previous Frame</span>
+                </button>
+                
+                <div class="frame-indicators">
+                    <span class="indicator active" data-frame="1"></span>
+                    <span class="indicator" data-frame="2"></span>
+                    <span class="indicator" data-frame="3"></span>
+                    <span class="indicator" data-frame="4"></span>
+                    <span class="indicator" data-frame="5"></span>
+                </div>
+
+                <button class="btn-nav-arrow" id="btn-next-frame">
+                    <span>Next Frame</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </button>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
